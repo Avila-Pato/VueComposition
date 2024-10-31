@@ -1,35 +1,85 @@
 @import './base.css';
 
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+  max-width: 800px; /* Ancho máximo del contenedor */
+  margin: 0 auto; /* Centra el contenedor en la página */
+  padding: 1rem; /* Padding reducido */
+  font-weight: normal; /* Peso de fuente normal */
+  background-color: #f9f9f9; /* Color de fondo suave */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra más sutil */
 }
+
+h2 {
+  font-size: 1.5rem; /* Tamaño de fuente más pequeño */
+  color: hsla(160, 100%, 37%, 1); /* Color del texto */
+  margin-bottom: 0.5rem; /* Espaciado inferior reducido */
+  text-align: center; /* Centrar texto */
+}
+
+h3 {
+  font-size: 1.2rem; /* Tamaño de fuente para el precio */
+  color: #666; /* Color más suave para el precio */
+  text-align: center; /* Centrar el precio */
+}
+
+img {
+  max-width: 80%; /* Reduce el ancho máximo de la imagen */
+  height: auto; /* Mantiene la proporción de la imagen */
+  border-radius: 5px; /* Bordes redondeados para las imágenes */
+  margin: 0.5rem auto; /* Espaciado vertical y centrado */
+  display: block; /* Hace que la imagen sea un bloque para centrar */
+}
+
+button {
+  background-color: hsla(160, 100%, 37%, 1); /* Color de fondo del botón */
+  color: white; /* Color de texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 4px; /* Bordes redondeados */
+  padding: 0.5rem 1rem; /* Espaciado interno reducido */
+  cursor: pointer; /* Cambia el cursor a mano */
+  font-size: 0.9rem; /* Tamaño de fuente más pequeño */
+  transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves */
+  display: block; /* Hace que el botón sea un bloque */
+  margin: 0.5rem auto; /* Centra el botón */
+}
+
+button:hover {
+  background-color: hsla(160, 100%, 37%, 0.8); /* Cambio de color al pasar el mouse */
+  transform: scale(1.05); /* Leve aumento al pasar el mouse */
+}
+p {
+  font-size: 0.9rem; /* Tamaño de fuente más pequeño */
+  color: #333; /* Color de texto más oscuro */
+  text-align: center; /* Centrar el texto */
+  margin: 0.5rem 0; /* Espaciado superior e inferior */
+}
+
 
 a,
 .green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+  text-decoration: none; /* Sin subrayado */
+  color: hsla(160, 100%, 37%, 1); /* Color del texto */
+  transition: 0.4s; /* Transición suave */
+  padding: 2px; /* Reduce el padding en enlaces */
 }
 
 @media (hover: hover) {
   a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+    background-color: hsla(160, 100%, 37%, 0.2); /* Fondo al pasar el cursor */
   }
 }
 
 @media (min-width: 1024px) {
   body {
-    display: flex;
-    place-items: center;
+    display: flex; /* Flexbox para el cuerpo */
+    place-items: center; /* Centra verticalmente */
   }
 
   #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+    display: grid; /* Usar grid para el layout */
+    grid-template-columns: 1fr 1fr; /* Dos columnas */
+    gap: 1rem; /* Espacio entre columnas reducido */
+    padding: 0 1rem; /* Reduce el padding */
   }
 }

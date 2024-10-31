@@ -1,51 +1,53 @@
-// Pintando en la web
 <template>
-  <h1 v-bind:style="Mycolor">Hola soy {{ Nombre }} y tengo {{ Edad }}</h1>
-    <h2 v-bind:class="selector">Hola soy {{ Nombre }} y tengo {{ Edad }}</h2>
+  <h2>La Cena de hoy es {{ contador + 1 }}: {{ nombre }}</h2>\
+  <h3 class="Precio"> Precio ${{ productos[contador].precio }}
+      <div>
+        <p :class="Ingredientes"> Ingredientes = {{ productos[contador].ingredientes}}</p>
+        </div>
+      <div v-if="productos[contador].findesemana" class="LosFinesdeSemana">
+            (Disponible solos los fines de semana)
+      </div>
+      <div v-else class="todosLosDias">
+            (Disponible solo en la semana)
+      </div>
+  </h3>
+  <img :src="productos[contador].imagen" alt="Imagen del producto" />
 
-  <div>
-    <button @click="decremento">-</button>
-    <span :class="NumberColor">{{ contador }}</span>
-    <button @click="incremento">+</button>
-  </div>
+  <button @click="siguiente">Siguiente ({{ contador + 1 }}/{{ total }})</button>
 </template>
 
 <script setup>
-import {ref} from "vue"
+import { ref, computed } from "vue";
+import { productos } from "./data.js";
 
-const NumberColor = ref("green")
-const contador= ref(0)
-const Nombre = "Patricio";
-const Edad = 26;
-const Mycolor = "color:green;font-size:3em";
-const selector = "azul"
+const contador = ref(0); // Contador Reactivo
+const total = productos.length; // Asegúrate de que productos está definido correctamente
 
-const decremento = () => {
-    contador.value--
-    if(contador.value < 0) {
-      NumberColor.value = "red"
-    }
-}
-const incremento = () => {
-    contador.value++
-    if(contador.value >= 0) {
-      NumberColor.value = "green"
-    }
-}
+const siguiente = () => {
+  contador.value++;
+  if (contador.value >= total) {
+    contador.value = 0; // Reinicia al primer producto si se llega al final
+  }
+};
+
+// Propiedad computada para obtener el nombre formateado
+const nombre = computed(() => {
+  const Elnombre = productos[contador.value].nombre.toLowerCase();
+  return Elnombre.charAt(0).toUpperCase() + Elnombre.slice(1);
+});
 </script>
 
-// Estilos
 <style scoped>
-.azul {
-  color: blue;
+
+.todosLosDias{
+    color: green;
 }
-.green {
-  color: green
+
+.LosFinesdeSemana{
+    color: red;
 }
-.red {
-  color: red;
+.Precio{
+    font-size: 30px;
 }
-span {
-  font-size: 100px;
-}
+
 </style>
