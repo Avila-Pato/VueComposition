@@ -26,11 +26,3 @@ Vite es un "build tool" que proporciona una configuración simple y rápida para
 - **Hot Module Replacement (HMR)**: Cualquier cambio que realices en tu código se refleja inmediatamente en la vista previa de la aplicación, sin necesidad de recargar la página.
 - **Optimización en la Producción**: Vite optimiza automáticamente los módulos para un rendimiento máximo en producción, lo que resulta en tiempos de carga más rápidos.
 
-## Instalación
-
-Para instalar y ejecutar el proyecto localmente, sigue estos pasos:
-
-1. Clona el repositorio:
-   ```bash
-   git clone https://github.com/tu_usuario/nombre_del_repositorio.git
-   cd nombre_del_repositorio
