@@ -2,7 +2,8 @@
 
 ## Propósito
 
-El proyecto "Cena Sorpresa" es una aplicación web diseñada para presentar diferentes opciones de cenas, permitiendo a los usuarios explorar y conocer los precios e ingredientes de cada platillo. Su objetivo es ofrecer una experiencia interactiva y divertida para ayudar a los usuarios a decidir qué cenar.
+El proyecto "Cena Sorpresa" es una aplicación web diseñada para presentar diferentes opciones de cenas, permitiendo a los usuarios explorar y conocer los precios e ingredientes de cada platillo. Su objetivo es ofrecer una experiencia interactiva y divertida para ayudar a los usuarios a decidir qué cenar. Por ultimo no considero subirlo 
+a despligue debido a que no lo encuentro muy importante..
 
 ## Características
 
